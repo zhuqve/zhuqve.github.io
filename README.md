@@ -7,3 +7,4 @@ git remote add origin https://github.com/zhuqve/zhuqve.github.io.git
 git push -u origin master
 
 thanks
+good
