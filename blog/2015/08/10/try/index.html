@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>try - ๑۩朱雀门۩๑</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="yefeiyu" />
+    <meta name="description" content="i try" />
+    <meta name="keywords" content="keyw1, keyw2" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+  </head>
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">๑۩朱雀门۩๑</a></h1>
+        <p>蔑视、自豪与独立</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/media/">Media</a></li>
+          <li><a href="/stylesheets/">Stylesheets</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://github.com/zhuqve">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="zhuqve.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>try</h1>
+<p>
+text try.
+</p>
+
+<p>
+import pylab as pl
+from numpy import sin, pi, linspace
+t = linspace(0, 2*pi, 100)
+pl.plot(t, sin(t))
+pic = 'img/plot_test.png'
+pl.savefig(pic)
+print '#+caption: test python plot'
+print '<a href="./%s">./%s</a>'%pic
+</p>
+
+<p>
+./img/plot_test.png
+</p>
+
+<p>
+import sys
+sys.path.append('/Users/xxh/lib/site-packages')
+import xxh.aerospace.sun_sync_orbit_env as ss
+year = 2013
+area = 0.53*0.56
+eta = 0.148
+def foo(alt, dlt):
+    sp = ss.SSOEnv(alt,dlt)
+    days,beta = sp.beta(1., year)
+    qq = [sp.qm_Yn(b) for b in beta]
+    NY = [q<sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>*area*eta for q in qq]
+    qq = [sp.qm_Xp(b) for b in beta]
+    NX = [q<sup><a id="fnr.1.100" name="fnr.1.100" class="footref" href="#fn.1">1</a></sup>*area*eta for q in qq]
+    Nt1 = [NY[i]+2*NX[i] for i in xrange(len(beta))]
+    Nt2 = [3*NY[i] for i in xrange(len(beta))]
+    print '|%4.1f|%3.1f|N| %4.1f | %4.1f | %4.1f'%(alt, dlt,max(Nt1), min(Nt1), sum(Nt1)/len(Nt1))
+    print '| | |Y| %4.1f | %4.1f | %4.1f'%(max(Nt2), min(Nt2), sum(Nt2)/len(Nt2))
+    print '|--+--+--+--+--+--|'
+print '|--+--+--+--+--+--|'
+print '| alt/km | dlt | state | max power/W | min power/W | average power/W |'
+print '|--+--+--+--+--+--|'
+foo(800.,6.5)
+foo(800.,8.5)
+foo(800.,9.5)
+foo(1000.,6.5)
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p>DEFINITION NOT FOUND.</p></div>
+
+
+</div>
+</div>
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2015-08-10</span>
+        <span title="last modification date" class="post-info">2015-08-13</span>
+        <span title="tags" class="post-info"><a href="/tags/tag1/">tag1</a> <a href="/tags/tag2/">tag2</a></span>
+        <span title="author" class="post-info">yefeiyu</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          //var disqus_developer = 1;
+          var disqus_identifier = "/blog/2015/08/10/try";
+          var disqus_url = "http://zhuqve.github.io/blog/2015/08/10/try";
+          var disqus_shortname = 'zhuqve';
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <div class="ds-thread"></div>
+        <script type="text/javascript">
+          var duoshuoQuery = {short_name:'zhuqve'};
+          (function() {
+          var ds = document.createElement('script');
+          ds.type = 'text/javascript';ds.async = true;
+          ds.src = 'http://static.duoshuo.com/embed.js';
+          ds.charset = 'UTF-8';
+          (document.getElementsByTagName('head')[0]
+          || document.getElementsByTagName('body')[0]).appendChild(ds);
+          })();
+        </script>
+      </section>
+      <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="/media/js/main.js"></script>
+      <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.x (<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+        <p>
+          Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:yefeiyu &lt;at&gt; gmail &lt;dot&gt; com">yefeiyu</a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+          <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
