@@ -1,0 +1,11 @@
+#+TITLE:       try2
+#+AUTHOR:      
+#+EMAIL:       xu@debian-armhf.""
+#+DATE:        2015-08-13 四
+#+URI:         /blog/%y/%m/%d/try2
+#+KEYWORDS:    kw1, kw2
+#+TAGS:        t1, t2
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: good description
+good
